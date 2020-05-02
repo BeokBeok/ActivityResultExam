@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         if (result.resultCode == RESULT_OK) {
             Toast.makeText(
                 this,
-                "result data is : ${result.data?.getStringExtra("DETAIL")}",
+                "result data is : ${result.data?.getStringExtra("message")}",
                 Toast.LENGTH_SHORT
             ).show()
         }
@@ -23,12 +23,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        goDetailActivity()
+        navigate()
     }
 
-    private fun goDetailActivity() {
-        btn_go_detail.setOnClickListener {
-            startForResult(Intent(this, DetailActivity::class.java))
+    private fun navigate() {
+        btn_go_activity.setOnClickListener {
+            startForResult(Intent(this, SecondActivity::class.java))
+        }
+        btn_go_fragment.setOnClickListener {
+            startForResult(Intent(this, SecondFragmentActivity::class.java))
         }
     }
 }
