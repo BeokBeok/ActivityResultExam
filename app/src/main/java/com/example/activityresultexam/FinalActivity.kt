@@ -9,6 +9,7 @@ class FinalActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_final)
+        title = "FinalActivity"
     }
 
     override fun onBackPressed() {

@@ -8,5 +8,6 @@ class SecondFragmentActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second_fragment)
+        title = "SecondFragment"
     }
 }
